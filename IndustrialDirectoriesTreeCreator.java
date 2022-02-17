@@ -72,7 +72,7 @@ public class IndustrialDirectoriesTreeCreator {
      */
     private static int getElemNumInCurLvl(int curLvl) {
         if (curLvl < maxNestingLvl) return elementsPerEachNestingLvl.get(curLvl - 1);
-        else return elementsPerEachNestingLvl.get(elementsPerEachNestingLvl.size() - 1);
+        return elementsPerEachNestingLvl.get(elementsPerEachNestingLvl.size() - 1);
     }
 
     /** The method creates directory which is given as param, recreating missing dir tree if needed.
@@ -94,8 +94,8 @@ public class IndustrialDirectoriesTreeCreator {
             System.out.print("Select dir where to create files. Otherwise default dir will be used (Yes/No): ");
             String answer = reader.readLine();
             System.out.println();
-            if (answer.equalsIgnoreCase("yes")) return true;
-            else if (answer.equalsIgnoreCase("no")) return false;
+            if ("yes".equalsIgnoreCase(answer)) return true;
+            else if ("no".equalsIgnoreCase(answer)) return false;
             else System.out.println("Invalid answer. Try again.");
         }
     }
