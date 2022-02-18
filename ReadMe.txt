@@ -1,1 +1,1 @@
-This is my first pet project made on the 7-th of February 2022. 
+This is my first pet project made on 7-th February 2022. 
